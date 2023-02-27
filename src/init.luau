@@ -25,7 +25,7 @@ type Noise2D = {
     Creates a new Noise2D object. If no seed is provided, a random seed will be
     generated using the module's internal Random object.
 ]=]
-function Noise2D.new(seed: number): Noise2D
+function Noise2D.new(seed: number?): Noise2D
 	local self = setmetatable({}, Noise2D)
 	self._seed = seed or random:NextInteger(-2^53, 2^53)
 	return self
